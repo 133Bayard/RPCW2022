@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <metadata>
+        <titulo> TPC1 </titulo>
+        <data> 18 de fevereiro de 2022 </data>
+        <autor> António Jorge Nande Rodrigues </autor>
+        <uc> Representação e Processsamento de Conhecimento na Web </uc>
+    </metadata>
+    <resumo>
+        Página HTML sobre o Japão, onde são exploradas diversas funcionalidades como a reprodução de 
+        vídeos e aúdio na mesma, encaminhamento para outras ligações, entre outras.
+
+    </resumo>
+    <resultados>
+        <html>
+            <nome>teste.html</home>
+        </html>
+        <imagem>
+            <nome>japan.jpeg</home>
+        </imagem>
+        <audio>
+            <nome>Amazing Japanese Shinobue flute Performance by Shinobue Sato(佐藤和哉) MAIHIME(舞姫)</home>
+        </audio>
+    </resultados>
+</manifesto>
