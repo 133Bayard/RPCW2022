@@ -97,7 +97,7 @@ for ator,values in atores:
     af=af[2:-2]
     with open(filename, 'w'):
         file = open(filename,"w")
-        file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>'+af+'</title>\n<meta charset="UTF-8"/>\n</head>')
+        file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>'+af+' (Filmes)'+'</title>\n<meta charset="UTF-8"/>\n</head>')
         file.write('<body>')
         for filme in values['filmes']:
             file.write('<p>'+filme+'</p>')
