@@ -29,7 +29,7 @@ def listToString(s):
     # return string  
     return str1 
 i=1
-with open("cinemaATP.json", encoding='utf-8') as meu_json:
+with open("/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/cinemaATP.json", encoding='utf-8') as meu_json:
     dados = json.load(meu_json)
 
 filmesO = sorted(dados, key=lambda k: k['title'], reverse=False)
@@ -39,7 +39,7 @@ atoresO = sorted(dados, key=lambda k: k['cast'], reverse=False)
 
 
 for filme in filmesO:
-    filename = "HTML/f"+ str(i) + ".html"
+    filename = "/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/HTML/f"+ str(i) + ".html"
     dirname = os.path.dirname(filename)
     if not os.path.exists(dirname):
         os.makedirs(dirname)
@@ -53,8 +53,8 @@ for filme in filmesO:
     i+=1
 
 j=1
-with open("HTML/filmes.html", 'w'):
-        file = open("HTML/filmes.html","w")
+with open("/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/HTML/filmes.html", 'w'):
+        file = open("/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/HTML/filmes.html","w")
         file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>'+'Filmes'+'</title>\n<meta charset="UTF-8"/>\n</head>')
         file.write('<body>')
         for ele in filmesO:
@@ -66,8 +66,8 @@ with open("HTML/filmes.html", 'w'):
         file.write('</body>')
         file.close()
 
-with open("HTML/index.html", 'w'):
-    file = open("HTML/index.html", "w")
+with open("/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/HTML/index.html", 'w'):
+    file = open("/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/HTML/index.html", "w")
     file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>'+'Início'+'</title>\n<meta charset="UTF-8"/>\n</head>')
     file.write('<body>')
     file.write('<h2><a href="http://localhost:7777/filmes">' + 'Filmes' + '</a></h2>\n')
@@ -76,24 +76,28 @@ with open("HTML/index.html", 'w'):
 
 for filme in filmesO:
     for ator in (list(list_split(filme["cast"],1))):
-        if str(ator) not in atores:
-            atores[str(ator)] = {
+        af = str(ator)
+        if af not in atores:
+            atores[af] = {
                 'filmes' : []
             }
-            atores[str(ator)]['filmes'].append(filme['title'])
+            atores[af]['filmes'].append(filme['title'])
 
         else:
-             atores[str(ator)]['filmes'].append(filme['title'])
+             atores[af]['filmes'].append(filme['title'])
 
 
 atores = atores.items()
 atores = sorted(atores)
 
+
 for ator,values in atores:
-    filename = "HTML/a"+ str(atori) + ".html"
+    filename = "/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/HTML/a"+ str(atori) + ".html"
+    af = str(ator)
+    af=af[2:-2]
     with open(filename, 'w'):
         file = open(filename,"w")
-        file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>'+ator+'</title>\n<meta charset="UTF-8"/>\n</head>')
+        file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>'+af+'</title>\n<meta charset="UTF-8"/>\n</head>')
         file.write('<body>')
         for filme in values['filmes']:
             file.write('<p>'+filme+'</p>')
@@ -103,14 +107,16 @@ for ator,values in atores:
     atori+=1
 
 j=1
-with open("HTML/atores.html", 'w'):
-        file = open("HTML/atores.html","w")
+with open("/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/HTML/atores.html", 'w'):
+        file = open("/Users/antoniojorgenanderodrigues/Desktop/Universidade/4º Ano/2º Semestre/RPCW/RPCW2022/TP2/HTML/atores.html","w")
         file.write('<!DOCTYPE html>\n<html>\n<head>\n<title>'+'Atores'+'</title>\n<meta charset="UTF-8"/>\n</head>')
         file.write('<body>')
         for ator,values in atores:
             numero = str(j)
+            af = str(ator)
+            af=af[2:-2]
             file.write('<p><a href="http://localhost:7777/atores/f' + numero +
-                    '">' + ator + '</a>\n</p>')
+                    '">' + af + '</a>\n</p>')
             j += 1
         file.write('<a href="http://localhost:7777/">Voltar atrás</a>')
         file.write('</body>')
