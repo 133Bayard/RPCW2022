@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC2 - Filmes e Atores</titulo>
+        <data>28 de fevereiro de 2022</data>
+        <autor>
+        <id>PG47030</id>
+        <nome>António Jorge Nande Rodrigues</nome>
+        </autor>
+        <uc>
+        <sigla>RPCW2022</sigla>
+        <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este trabalho consistia no desenvolvimento de um servidor de ficheiros
+          em NodeJS que serve páginas HTML criadas a partir de registos num ficheiro JSON</p>
+        <p>O principal objetivo deste tpc era gerar páginas HTML a partir de um ficheiro dado,
+          criando um servidor capaz de lidar com os URL's das diferentes páginas. </p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>cinemaATP.json</url>
+            <texto>Dataset de filmes e atores</texto>
+        </resultado>
+        <resultado>
+            <url>parser.py</url>
+            <texto>Parser do dataset, em Python, e criação das respetivas páginas HTML</texto>
+        </resultado>
+        <resultado>
+            <url>server.js</url>
+            <texto>Servidor de ficheiros em JavaScript</texto>
+        </resultado>
+    </resultados>
+</doc>
