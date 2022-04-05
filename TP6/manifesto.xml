@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC6 - Ficheiros</titulo>
+        <data>05 de abril de 2022</data>
+        <autor>
+        <id>PG47030</id>
+        <nome>António Jorge Nande Rodrigues</nome>
+        </autor>
+        <uc>
+        <sigla>RPCW2022</sigla>
+        <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+        <p>Recorrendo à utilização de uma base de dados MongoDB, o objetivo deste trabalho é a implementação de um servidor NodeJS.</p> 
+        <p>Usamos a framework Express para criar diretorias e ficheiros, utilizando pug para as views.</p>
+        <p>Assim, foi criada uma página onde era possível realizar o upload de ficheiros e posterior remoção dos mesmos da base de dados.</p>
+    <resultados>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>app.js</url>
+            <texto>Aplicação web</texto>
+        </resultado>
+        <resultado>
+             <url>controllers/file.js</url>
+            <texto>Controlador para a gestão da meta-informação</texto>
+        </resultado>
+        <resultado>
+            <url>models/file.js</url>
+            <texto>Modelo para a meta-informação dos ficheiros</texto>
+        </resultado>
+        <resultado>
+             <url>routes/index.js</url>
+            <texto>Rota principal</texto>
+        </resultado>
+        <resultado>
+            <url>views/index.pug</url>
+            <texto>View da página web</texto>
+        </resultado>
+        <resultado>
+            <url>uploads/</url>
+            <texto>Diretoria utilizada para armazenar temporariamente os uploads</texto>
+        </resultado>
+    </resultados>
+</doc>
